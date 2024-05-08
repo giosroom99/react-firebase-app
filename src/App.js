@@ -4,10 +4,13 @@ import "./App.css";
 
 function App() {
   const [posts, setPosts] = useState(null);
+  console.log("host");
 
   useEffect(() => {
     const getData = async () => {
-      const demoData = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      const demoData = await axios.get(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
       setPosts(demoData.data);
     };
 
